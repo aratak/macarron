@@ -1,0 +1,22 @@
+{
+  "author": "Alexey Osipenko <alexey@osipenko.in.ua> (http://osipenko.in.ua)",
+  "name": "macarron",
+  "description": "NodeJS library for mocking and subing objects, libs and methods.",
+  "version": "0.0.0",
+  "homepage": "https://github.com/aratak/macarron",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/aratak/macarron.git"
+  },
+  "main": "index",
+  "engines": {
+    "node": "~0.6.6"
+  },
+  "dependencies": {
+    "coffee-script":"*"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  }
+}
