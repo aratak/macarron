@@ -1,30 +1,7 @@
 _ = require 'underscore'
-p = console.log
 
-class Stub
-  @unstub: ->
+result = {}
+_.extend result, require('./lib/stub')
+_.extend result, require('./lib/mock')
 
-  constructor: (@originalObject, @mockedObject={})->
-    @extend()
-    @injectSelf()
-
-  injectSelf: ->
-    _.extend @originalObject, stub: this
-
-  extend: ->
-    _.extend @originalObject, @mockedObject
-
-
-  obj: -> @originalObject
-
-
-# class Mock
-#   constructor: (originalObject)->
-
-
-
-module.exports = {
-  stub: (args...)-> new Stub(args...).obj()
-  unstub: (args...) -> Stub.unstub(args...)
-  mock: (args...)->
-}
+module.exports = result
