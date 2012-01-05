@@ -13,9 +13,10 @@
     "node": "~0.6.6"
   },
   "dependencies": {
-    "coffee-script":"*"
+    "underscore":"*"
   },
   "devDependencies": {
+    "coffee-script":"*",
     "mocha": "*",
     "should": "*"
   }

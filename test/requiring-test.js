@@ -4,12 +4,22 @@ var assert = require('assert');
 
 describe("General requirement", function() {
   it("should be required and return object", function(done) {
-    require('../index').should.be.a('function');
+    require('../index').should.be.a('object');
     done();
   });
 
-  it("result of executing of function should be a object", function(done) {
-    require('../index')().should.be.a('object');
+  it("should have mock attributes as function", function(done) {
+    require('../index').should.have.property('mock');
+    done();
+  });
+
+  it("should have stub attributes as function", function(done) {
+    require('../index').should.have.property('stub');
+    done();
+  });
+
+  it("should have unstub attribute as function", function(done) {
+    require('../index').should.have.property('unstub');
     done();
   });
 
