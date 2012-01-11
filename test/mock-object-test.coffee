@@ -62,5 +62,19 @@ describe "#unmock", ->
     done()
 
   it "should return the same object only with obj parameter", (done) ->
-    unmock(mock(obj)).should.be.equal obj
+    mock obj
+    unmock obj
+    obj.should.be.equal obj
+    done()
+
+  it "should remove #mocks attribute from object", (done)->
+    mock obj, 'someMethod'
+    unmock obj
+    obj.should.not.have.property 'mocks'
+    done()
+
+  it "should revert origiginal method", (done)->
+    mock obj, 'someMethod', returns: 0
+    unmock obj
+    obj.someMethod().should.be.eql 1
     done()

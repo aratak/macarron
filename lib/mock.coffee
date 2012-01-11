@@ -35,8 +35,9 @@ module.exports = {
           throw "Method #{util.inspect(attributeName)} has been called with wrong arguments signature. Expected: #{util.inspect(options['arguments'])}, actual: #{util.inspect(_.values(arguments))}"
         return options['returns']
     obj
+  unmock: (obj) ->
+    console.error "[Method '#unmock' is not implemented yet]"
     obj
-  unmock: (obj) -> obj
 }
 
 
