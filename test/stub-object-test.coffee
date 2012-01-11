@@ -1,6 +1,5 @@
 _ = require 'underscore'
 should = require 'should'
-assert = require 'assert'
 
 describe "stub() with object parameter", ->
   obj = null

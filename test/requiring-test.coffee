@@ -1,5 +1,4 @@
 should = require "should"
-assert = require "assert"
 
 describe "General requirement", ->
   makarron = require "../index"
