@@ -23,7 +23,7 @@ For the mocking the object methods use `macarron.mock` with the
 following signature:
 
 ``` javascript
-  mock(obj, { mockedMethod: function() { /* mocked function */ } })
+  stub(obj, { stubedMethod: function() { /* stubed function */ } })
 ```
 
 pengind...
