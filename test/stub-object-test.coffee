@@ -1,5 +1,4 @@
 _ = require 'underscore'
-should = require 'should'
 
 describe "stub() with object parameter", ->
   obj = null
