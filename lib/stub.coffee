@@ -11,7 +11,7 @@ module.exports = {
     original = _.clone obj
     options = _.extend { strictMode: false }, options
 
-    deleteAttributes obj, _.keys(obj) if options.strictMode?
+    deleteAttributes obj, _.keys(obj) if options.strictMode
 
     _.extend obj, mock
     _.extend obj, stubs: {
