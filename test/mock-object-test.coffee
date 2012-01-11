@@ -2,8 +2,8 @@ _ = require 'underscore'
 
 describe "#mock", ->
   obj = null
-  makarron = require '../index'
-  mock = makarron.mock
+  macarron = require '../index'
+  mock = macarron.mock
 
   beforeEach (done)->
     obj = someAttribute: "foo", someMethod: -> 1
@@ -15,9 +15,9 @@ describe "#mock", ->
 
 describe "#unmock", ->
   obj = null
-  makarron = require '../index'
-  mock = makarron.mock
-  unmock = makarron.unmock
+  macarron = require '../index'
+  mock = macarron.mock
+  unmock = macarron.unmock
 
   beforeEach (done)->
     obj = someAttribute: "foo", someMethod: -> 1

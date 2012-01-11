@@ -1,20 +1,20 @@
 should = require "should"
 
 describe "General requirement", ->
-  makarron = require "../index"
+  macarron = require "../index"
 
   it "should be required and return object", (done) ->
-    makarron.should.be.a "object"
+    macarron.should.be.a "object"
     done()
 
   it "should have mock attributes as function", (done) ->
-    makarron.should.have.property "mock"
+    macarron.should.have.property "mock"
     done()
 
   it "should have stub attributes as function", (done) ->
-    makarron.should.have.property "stub"
+    macarron.should.have.property "stub"
     done()
 
   it "should have unstub attribute as function", (done) ->
-    makarron.should.have.property "unstub"
+    macarron.should.have.property "unstub"
     done()

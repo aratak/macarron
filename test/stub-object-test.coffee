@@ -2,9 +2,9 @@ _ = require 'underscore'
 
 describe "#stub", ->
   obj = null
-  makarron = require '../index'
-  stub = makarron.stub
-  unstub = makarron.unstub
+  macarron = require '../index'
+  stub = macarron.stub
+  unstub = macarron.unstub
 
   beforeEach (done)->
     obj = someAttribute: "foo"
@@ -45,9 +45,9 @@ describe "#stub", ->
 
 describe "#unstub", ->
   obj = null
-  makarron = require '../index'
-  stub = makarron.stub
-  unstub = makarron.unstub
+  macarron = require '../index'
+  stub = macarron.stub
+  unstub = macarron.unstub
 
   beforeEach (done)->
     obj = someAttribute: "foo"
