@@ -1,6 +1,6 @@
 _ = require 'underscore'
 
-describe "stub() with object parameter", ->
+describe "#stub", ->
   obj = null
   makarron = require '../index'
   stub = makarron.stub
@@ -10,7 +10,7 @@ describe "stub() with object parameter", ->
     obj = someAttribute: "foo"
     done()
 
-  it "should return the same object", (done)->
+  it "should return the same object only with object parameter", (done)->
     stub(obj).should.be.equal obj
     done()
 
@@ -29,22 +29,6 @@ describe "stub() with object parameter", ->
       obj.should.have.property 'newAttribute'
       done()
 
-
-  describe "unstub", ->
-
-    beforeEach (done)->
-      stub obj, newAttribute: "baz"
-      done()
-
-    it "should leave original attributes", (done)->
-      unstub(obj).should.have.property 'someAttribute'
-      done()
-
-    it "should remove all subbed attributes", (done)->
-      unstub(obj).should.not.have.property 'newAttribute'
-      done()
-
-
   describe "in strict mode", ->
 
     beforeEach (done)->
@@ -58,3 +42,29 @@ describe "stub() with object parameter", ->
     it "should has no original attributes", (done)->
       obj.should.not.have.property 'someAttribute'
       done()
+
+describe "#unstub", ->
+  obj = null
+  makarron = require '../index'
+  stub = makarron.stub
+  unstub = makarron.unstub
+
+  beforeEach (done)->
+    obj = someAttribute: "foo"
+    stub obj, newAttribute: "baz"
+    done()
+
+  it "should return the same object only with object parameter", (done)->
+    unstub(stub(obj)).should.be.equal obj
+    done()
+
+  it "should leave original attributes", (done)->
+    unstub(obj).should.have.property 'someAttribute'
+    done()
+
+  it "should remove all subbed attributes", (done)->
+    unstub(obj).should.not.have.property 'newAttribute'
+    done()
+
+
+
