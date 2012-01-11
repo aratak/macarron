@@ -9,6 +9,9 @@
     "url": "git://github.com/aratak/macarron.git"
   },
   "main": "index",
+  "scripts": {
+    "test": "NODE_ENV=test mocha"
+  },
   "engines": {
     "node": "~0.6.6"
   },
