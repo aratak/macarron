@@ -39,6 +39,3 @@ module.exports = {
     console.error "[Method '#unmock' is not implemented yet]"
     obj
 }
-
-
-# mock(s, 'methodName', {'returns': 5, 'arguments': [12, 34, 5], 'count': 10 }, callback);
