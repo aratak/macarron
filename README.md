@@ -26,7 +26,13 @@ following signature:
   stub(obj, { stubedMethod: function() { /* stubed function */ } })
 ```
 
-pengind...
+penging...
+
+# Testing
+
+![](https://secure.travis-ci.org/aratak/macarron.png)
+
+`npm test` or `NODE_ENV=test mocha`
 
 # Contributing
 
