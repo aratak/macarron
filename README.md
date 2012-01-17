@@ -30,7 +30,7 @@ penging...
 
 # Testing
 
-![](https://secure.travis-ci.org/aratak/macarron.png)
+[![](https://secure.travis-ci.org/aratak/macarron.png)](http://travis-ci.org/aratak/macarron)
 
 `npm test` or `NODE_ENV=test mocha`
 
